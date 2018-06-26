@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nero.maven.env.profiles.persistence.user.UserMapper">
+
+    <sql id="all_column">
+        id,createdBy,updatedBy,createTime,updateTime,version,isDeleted,userName
+    </sql>
+
+    <select id="getUser" resultType="User">
+        SELECT <include refid="all_column"/>
+        FROM user
+        WHERE userName = #{userName}
+    </select>
+</mapper>
