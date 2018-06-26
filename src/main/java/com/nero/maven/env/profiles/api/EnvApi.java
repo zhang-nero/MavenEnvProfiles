@@ -1,6 +1,7 @@
 package com.nero.maven.env.profiles.api;
 
 import com.nero.maven.env.profiles.entities.DeployEnv;
+import com.nero.maven.env.profiles.utils.ContextHelper;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,12 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/envApi")
 public class EnvApi {
-    @Autowired
-    private DeployEnv deployEnv;
 
     @ApiOperation(value = "查看部署环境信息", httpMethod = "GET", notes = "查看环境信息")
     @RequestMapping(value = "/getEnv", method = RequestMethod.GET)
     public DeployEnv getEnv() {
-        return deployEnv.convert();
+        return ContextHelper.getBeanByType(DeployEnv.class).convert();
     }
 }
