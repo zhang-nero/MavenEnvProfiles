@@ -3,7 +3,6 @@ package com.nero.maven.env.profiles.api;
 import com.nero.maven.env.profiles.entities.DeployEnv;
 import com.nero.maven.env.profiles.utils.ContextHelper;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
