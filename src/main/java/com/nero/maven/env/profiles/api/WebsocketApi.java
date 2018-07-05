@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WebsocketApi {
 
     @MessageMapping(value = "/welcome")
-    @SendTo(value = "/endPoint/getResponse")
+    @SendTo(value = "/queue/getResponse")
     public ApiResponse websocketTest(String name){
         System.out.println(name);
         return ApiResponse.success();
