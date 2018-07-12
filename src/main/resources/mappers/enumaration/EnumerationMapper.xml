@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nero.maven.env.profiles.persistence.enumeration.EnumerationMapper">
+
+    <sql id="all_column">
+        id,type
+    </sql>
+
+    <select id="getAll" resultType="Enumeration">
+        SELECT <include refid="all_column"/>
+        FROM enumeration
+    </select>
+</mapper>
