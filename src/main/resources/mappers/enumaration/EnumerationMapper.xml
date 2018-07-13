@@ -10,4 +10,8 @@
         SELECT <include refid="all_column"/>
         FROM enumeration
     </select>
+
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO enumeration (type) VALUES (#{type})
+    </insert>
 </mapper>

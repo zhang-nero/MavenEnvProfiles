@@ -22,4 +22,9 @@ public class EnumerationServiceImpl implements EnumerationService{
     public List<Enumeration> getAll() {
         return enumerationMapper.getAll();
     }
+
+    @Override
+    public int add(Enumeration enumeration) {
+        return enumerationMapper.add(enumeration);
+    }
 }

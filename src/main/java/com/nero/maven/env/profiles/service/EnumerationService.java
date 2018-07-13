@@ -10,4 +10,5 @@ import java.util.List;
  */
 public interface EnumerationService {
     List<Enumeration> getAll();
+    int add(Enumeration enumeration);
 }

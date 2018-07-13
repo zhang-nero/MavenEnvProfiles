@@ -9,5 +9,9 @@ import java.util.List;
  * @since 2018-07-12 17:43
  */
 public interface EnumerationMapper {
+
     List<Enumeration> getAll();
+
+    int add(Enumeration enumeration);
+
 }
