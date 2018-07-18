@@ -11,4 +11,9 @@
         FROM user
         WHERE userName = #{userName}
     </select>
+
+    <select id="getAllUser" resultType="User">
+        SELECT <include refid="all_column"/>
+        FROM user
+    </select>
 </mapper>

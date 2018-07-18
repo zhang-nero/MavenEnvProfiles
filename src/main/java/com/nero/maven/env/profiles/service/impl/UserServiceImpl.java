@@ -6,6 +6,8 @@ import com.nero.maven.env.profiles.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author Nero
  * @since 2018-06-26 13:21
@@ -19,5 +21,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUser(String userName) {
         return userMapper.getUser(userName);
+    }
+
+    @Override
+    public List<User> getAllUser() {
+        return userMapper.getAllUser();
     }
 }
